@@ -16,4 +16,9 @@ export default [
     type: "gltfModel",
     path: "models/ground.glb",
   },
+  {
+    name: "boatModel",
+    type: "gltfModel",
+    path: "models/boat.glb",
+  },
 ];

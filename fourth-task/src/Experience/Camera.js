@@ -117,7 +117,6 @@ export default class Camera {
     const pointerControlsX = this.controls.getObject().position.x;
     const pointerControlsY = this.controls.getObject().position.y;
     const pointerControlsZ = this.controls.getObject().position.z;
-
     this.raycaster.ray.origin.copy(this.controls.getObject().position);
 
     const intersections = this.raycaster.intersectObjects(

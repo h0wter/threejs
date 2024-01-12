@@ -1,4 +1,5 @@
 import Experience from "../Experience.js";
+import Boat from "./Boat.js";
 import Environment from "./Environment.js";
 import Ground from "./Ground.js";
 import Water from "./Water.js";
@@ -30,6 +31,7 @@ export default class World {
       // Setup
       this.ground = new Ground();
       this.water = new Water();
+      this.boat = new Boat();
       this.environment = new Environment();
     });
   }
