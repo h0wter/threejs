@@ -2,6 +2,8 @@ import * as THREE from "three";
 import Experience from "./Experience.js";
 import { PointerLockControls } from "three/addons/controls/PointerLockControls.js";
 
+const MAX_SUBMERSION = 2;
+
 export default class Camera {
   constructor() {
     this.CAMERA_POSITION = 5;
@@ -128,7 +130,7 @@ export default class Camera {
       distanceToGround = pointerControlsY - intersections[0].point.y;
       groundY = Math.max(
         intersections[0].point.y,
-        this.world.water.WATER_POSITION_Y
+        this.world.water.WATER_POSITION_Y - MAX_SUBMERSION
       );
 
       if (this.motionControl.canJump) {
